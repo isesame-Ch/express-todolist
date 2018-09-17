@@ -15,7 +15,7 @@ var responseJSON = function (ret) {
 };
 
 var todoModel = {
-	baseModel.call(this);
+	baseModel:call(this)
 };
 
 util.inherits(todoModel, baseModel);
