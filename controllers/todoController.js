@@ -1,4 +1,5 @@
 var todoList = require('../model/todoList.js');
+// var todoModel = require('../model/todoModel.js');
 
 var todoCtl = {
 	queryAll : function(cb) {
@@ -17,33 +18,8 @@ var todoCtl = {
 		todoList.delete(item, function(data) {
 			cb(data);
 		});
-	}
+	},
 };
-
-// var todo = function(cb) {
-// 		User.queryAll(function(data) {
-// 			cb(data);
-// 		});
-// 	}
 
 
 module.exports = todoCtl;
-
-// module.exports = function(app) {
-// 	app.get('/todo', function(req, res) {
-// 		res.render('todo',{ todos:data });
-// 	});
-
-// 	app.post('/todo', urlencodeParser, function(req, res) {
-		// var item = req.body;
-// 		data.push(item);
-// 		res.json(data);
-// 	});
-
-// 	app.delete('/todo/:item', urlencodeParser, function(req, res) {
-// 		data = data.filter(function(todo) {
-// 			return todo.item.replace(/ /g, "-") !==req.params.item;
-// 		});
-// 		res.json(data);
-// 	});
-// }
